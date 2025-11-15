@@ -21,6 +21,7 @@ jobs:
 
       - name: Build TrollStore
         run: |
+          sed -i.bak 's#build_installer15 build_installer64e#g' Makefile
           make
 
       - name: Upload Artifact
