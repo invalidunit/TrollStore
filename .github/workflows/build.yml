@@ -12,6 +12,13 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Install Theos
+        uses: Randomblock1/theos-action@v1
+
+      - name: Install libarchive
+        run: |
+          brew install libarchive
+
       - name: Build TrollStore
         run: |
           make
